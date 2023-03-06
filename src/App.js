@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Login from "../src/pages/login/index.js";
+import Routing from './components/navigation bar';
 
 export default function App() {
-  return (
+    return (
 
-      <Login />
+          <Routing />
 
-  )
+    )
 }
