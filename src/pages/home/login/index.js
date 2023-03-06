@@ -1,6 +1,7 @@
 
 import './styles.css';
 import pic1 from'./pic1.svg';
+import logo from './logouni.png';
 
 
 export default function Login() {
@@ -9,7 +10,7 @@ export default function Login() {
         <div className="rectangle">
             <div className='header'>
                 <div className='headerSchool'>
-                    <div className='circle'></div>
+                    <img src={logo} alt="logo" className="logo" />
                     <span>INFOTECH UNIVERSITY</span>
                 </div>
                 <div className='headerButton'>
