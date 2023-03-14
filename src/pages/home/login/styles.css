@@ -3,7 +3,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 91vh;
   background-color: #f6f6f6;
 }
 .rectangle {
@@ -18,7 +18,11 @@
   border-bottom-left-radius: 10px;
   background-color: white;
 }
-
+.logo {
+  height: 8vh;
+  margin-left: -0.7vw;
+  margin-top: -0.5vh;
+}
 .header{
   display: flex;
   flex-direction: row;
@@ -27,25 +31,22 @@
   display: flex;
   margin-top: 0.5vw;
 }
-.circle {
-  width: 1vw;
-  height: 2vh;
-  border-radius: 50%;
-  background-color: #1CAEDC;
-}
 .header span{
     height: 3vh;
     font-size: 10px;
     font-weight: 800;
     color: #2AB5E1;
     text-align: center;
-    margin-left: 0.5vh;
+    margin-left: -0.5vw;
+    margin-top: 2.5vh;
 }
 .headerButton{
   margin-left: 16vh
 }
 .loginButton {
   height: 3vh;
+  margin-top: 2.5vh;
+  margin-right: 1vw;
   color: #29B4E0;
   font-size: 16px;
   font-weight: 800;
@@ -76,7 +77,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 5vh;
+  margin-top: 6vh;
 }
 .formHeader{
   display: flex;
@@ -179,5 +180,3 @@
   .forgotpassButton:hover{
     color: #15AAD9;
   }
-  
-
