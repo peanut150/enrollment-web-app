@@ -1,0 +1,32 @@
+.rectangle {
+    display: flex;
+    justify-content: center;
+    height: 549px;
+    width: 488px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    padding-top: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+  }
+  
+  .rectangleRight {
+    display: flex;
+    justify-content: right;
+    height: 549px;
+    width: 488px;
+    padding-top: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #15AAD9;
+  }
+
+  .circle {
+    position: absolute;
+    top: 124px;
+    left: 315px;
+  }
+  
+  .circle1 {
+    fill: #1CAEDC;
+  }
