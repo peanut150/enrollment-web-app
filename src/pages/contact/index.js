@@ -1,17 +1,23 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './logoUni.png';
 
 export default function Contact() {
   return (
-    <section className='hero'>
-      <img src={logo} alt='Logo' style={{ height: '271px', width: '399px', borderRadius: '0px', marginBottom: '20px' }} />
-      <h1 style={{ textAlign: 'center' }}>Contact Us Directly</h1>
-      <hr />
-      <div style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 0' }}>
-        <div><strong>Facebook Page:</strong> Infotect University</div>
+    <div className='hero'>
+      <div style={{backgroundColor: 'white', display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+        <img src={logo} style={{height: 500, width: 'auto', marginLeft: 530, marginTop: -270}}/>
+        <div style={{color: 'black', fontSize: '70px', fontWeight: 'bold', marginTop: '160px', marginLeft:"-40rem" }}><h1>Contact Us Directly</h1></div>
+      </div>
+
+      <p>
+      <div>
+        <div><strong>Facebook Page:</strong> InfoTech University</div>
         <div><strong>Email:</strong> infotechuniversity@infouniv.com</div>
         <div><strong>Contact Number:</strong> 09090114021</div>
       </div>
-    </section>
+      </p>
+  </div>
   )
 }
+
+
