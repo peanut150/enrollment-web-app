@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import BackBtn from "../../buttonprops/BackBtn";
-import Capstone from "./Component/CapstoneProf";
+import PhysicalActivityTowardsHealthandFitness1 from "./Component/PhysicalActivityTowardsHealthandFitness1Prof";
 import SubjectBtn from "./SubjectBtn";
-import SAM from "./Component/SAMProf";
-import SocProf from "./Component/SocProfIssuesProf";
-import ITElec3 from "./Component/ITElec3Prof";
-import ITElect4 from "./Component/ITElec4Prof";
-import GnS from "./Component/GnSProf";
+import ObjectOrientedProgramming from "./Component/ObjectOrientedProgrammingProf";
+import AccountingPrinciples from "./Component/AccountingPrinciplesProf";
+import FundamentalsofDatabaseSystems from "./Component/FundamentalsofDatabaseSystemsProf";
+import PlatformTechnologies from "./Component/PlatformTechnologiesProf";
+import IntrotoHumanComputerInteraction from "./Component/IntrotoHumanComputerInteractionProf";
+import EnvironmentalScience from "./Component/EnvironmentalScienceProf";
 
-function FourthYearFirstSem({onClick, title}) {
-const [showIT411, setShowIT411] = useState(false)
-const [showIT412, setShowIT412] = useState(false)
-const [showIT413, setShowIT413] = useState(false)
-const [showIT414, setShowIT414] = useState(false)
-const [showIT415, setShowIT415] = useState(false)
-const [showGnS, setShowGnS] = useState(false)
+function SecondYearFirstSem({onClick, title}) {
+const [showPATHFIT3, setShowPATHFIT3] = useState(false)
+const [showIT211, setShowIT211] = useState(false)
+const [showIT212, setShowIT212] = useState(false)
+const [showIT213, setShowIT213] = useState(false)
+const [showIT214, setShowIT214] = useState(false)
+const [showIT215, setShowIT215] = useState(false)
+const [showEnviSci, setShowEnviSci] = useState(false)
 const [show, setShow] = useState(true)
   return (
 
@@ -22,39 +24,45 @@ const [show, setShow] = useState(true)
     
         <div style={{ backgroundColor: "#F6F6F6", height: "100%", width:"100%", display:"flex", position:"absolute"}}>
 
-          {showIT411 ? (
+          {showPATFIT3 ? (
             <>
-            <Capstone onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}></Capstone>
+            <PhysicalActivityTowardsHealthandFitness1 onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}></PhysicalActivityTowardsHealthandFitness1>
             </>
           ) : null}
 
-          {showIT412 ? (
+          {showIT211 ? (
             <>
-            <SAM></SAM>
+            <IntrotoHumanComputerInteraction>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</IntrotoHumanComputerInteraction>
             </>
           ) : null}
 
-          {showIT413 ? (
+          {showIT212 ? (
              <>
-             <SocProf></SocProf>
+             <FundamentalsofDatabaseSystems>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</FundamentalsofDatabaseSystems>
              </>
           ) : null}
 
-          {showIT414 ? (
+          {showIT213 ? (
              <>
-             <ITElec3></ITElec3>
+             <PlatformTechnologies>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</PlatformTechnologies>
              </>
           ) : null}
 
-          {showIT415 ? (
+          {showIT214 ? (
               <>
-              <ITElect4></ITElect4>
+              <ObjectOrientedProgramming>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</ObjectOrientedProgramming>
               </>
           ) : null}
 
-          {showGnS ? (
+          {showIT215 ? (
               <>
-              <GnS></GnS>
+              <AccountingPrinciples>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</AccountingPrinciples>
+              </>
+          ) : null}
+
+          {showIT211 ? (
+              <>
+              <EnvironmentalScience>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</EnvironmentalScience>
               </>
           ) : null}
 
@@ -78,22 +86,25 @@ const [show, setShow] = useState(true)
              </div>
              <div style={{display:"flex", flexDirection:"column", marginLeft: 55, marginTop: "8rem"}}>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT411(!showIT411)} code="IT411" title="Capstone Project and Research 2"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT411(!showIT411)} code="PATFIT3" title="Physical Activity Towards Health and Fitness 1"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT412" title="Systems Administration and Maintenance"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT211" title="Intro to Human Computer Interaction"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT413(!showIT413)} code="IT413" title="Social and Professional Issues"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT413(!showIT413)} code="IT212" title="Fundamentals of Database Systems"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT414(!showIT414)} code="IT414" title="IT Elective 3"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT414(!showIT414)} code="IT213" title="Platform Technologies"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT415(!showIT415)} code="IT415" title="IT Elective 4"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT415(!showIT415)} code="IT214" title="Object Oriented Programming"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowGnS(!showGnS)} code="GnS" title="Gender And Society"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT215" title="Accounting Principles"></SubjectBtn>
+              </div>
+              <div>
+                <SubjectBtn onClick={() => setShow(!show) & setShowGnS(!showGnS)} code="EnviSci" title="Environmental Science"></SubjectBtn>
               </div>
              </div>
              <div style={{marginTop: 54, marginLeft: -255}}>
@@ -110,4 +121,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default FourthYearFirstSem;
+export default SecondYearFirstSem;
