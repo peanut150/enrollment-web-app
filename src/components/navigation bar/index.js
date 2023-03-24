@@ -5,6 +5,8 @@ import Navbar from './navbar';
 import Home from '../../pages/home/index';
 import About from '../../pages/about/index';
 import Contact from '../../pages/contact';
+import SignUp from '../../pages/sign up';
+import Dashboard from '../../pages/dashboard';
 
 export default function Routing() {
     return (
@@ -25,6 +27,14 @@ export default function Routing() {
 
               <Route path='/contact' component={Contact} exact>
                 <Contact />
+              </Route>
+
+              <Route path='/signup' component={SignUp} exact>
+                <SignUp />
+              </Route>
+
+              <Route path='/dashboard' component={Dashboard} exact>
+                <Dashboard />
               </Route>
 
             </Switch>
