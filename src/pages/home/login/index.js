@@ -1,10 +1,10 @@
-
 import './styles.css';
 import pic1 from'./pic1.svg';
 import logo from './logo.png';
 
 
 export default function Login() {
+
   return (
     <div className="container">
         <div className="rectangle">
