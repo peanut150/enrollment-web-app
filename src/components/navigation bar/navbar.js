@@ -29,7 +29,7 @@ export default function Navbar() {
                     <li>Contact</li>
                 </Link>
 
-                <Link to='/navbarbutton'>
+                <Link to='/signup'>
                     <li> <NavBarButton /> </li>
                 </Link>
             </ul>
