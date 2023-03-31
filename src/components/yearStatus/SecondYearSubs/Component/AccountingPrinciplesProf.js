@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function AccountingPrinciples({onClick, title}) {
+function AccountingPrinciples({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -21,7 +21,7 @@ const [show, setShow] = useState(true)
                     top: 70
                   }
                 }>
-              <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
+              <div style={{marginLeft: "-10rem", marginTop: "-3rem"}}>
                 <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT215 - Accounting Principles</h4>
               </div>              
              </div>
@@ -82,11 +82,11 @@ const [show, setShow] = useState(true)
 
                 </div>
              </div>
-                <div style={{marginTop: 90}}>
-                    <BackBtn title="BACK" onClick={onClick}></BackBtn>
+             <div style={{marginTop: 90}}>
+                    <BackBtn title="BACK" onClick={onClickBack}></BackBtn>
                 </div>
                 <div style={{marginLeft: "60rem", marginTop: 90}}>
-                    <BackBtn title="NEXT" onClick={onClick}></BackBtn>
+                    <BackBtn title="NEXT" onClick={onClickNext}></BackBtn>
                 </div>
             
              

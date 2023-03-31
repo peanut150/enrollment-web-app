@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import BackBtn from "../../buttonprops/BackBtn";
-import Capstone from "./Component/CapstoneProf";
-import SubjectBtn from "./SubjectBtn";
-import SAM from "./Component/SAMProf";
-import SocProf from "./Component/SocProfIssuesProf";
-import ITElec3 from "./Component/ITElec3Prof";
-import ITElect4 from "./Component/ITElec4Prof";
-import GnS from "./Component/GnSProf";
+import Comprog1 from "./Component/ComprogProf";
+import MMW from "./Component/MMWProf";
+import NSTP1 from "./Component/NSTP1Prof";
+import PE1 from "./Component/PE1Prof";
+import Purcom from "./Component/PurcomProf";
+import Rph from "./Component/RPHProf";
+import Tcw from "./Component/TCWProf";
+import IntroToComputing from './Component/IntroProf';
+import SubjectBtn from "./SubjectBtn"
 
-function FourthYearFirstSem({onClick, title}) {
-const [showIT411, setShowIT411] = useState(false)
-const [showIT412, setShowIT412] = useState(false)
-const [showIT413, setShowIT413] = useState(false)
-const [showIT414, setShowIT414] = useState(false)
-const [showIT415, setShowIT415] = useState(false)
-const [showGnS, setShowGnS] = useState(false)
+function FirstYearFirstSem({onClickBack, title, onClickNext}) {
+const [showNSTP101, setShowNSTP101] = useState(false)
+const [showPE101d, setShowPE101d] = useState(false)
+const [showEng101, setShowEng101] = useState(false)
+const [showMath101, setShowMath101] = useState(false)
+const [showSS103, setShowSS103] = useState(false)
+const [showSS102, setShowSS102] = useState(false)
+const [showIT112, setShowIT112] = useState(false)
+const [showIT111, setShowIT111] = useState(false)
 const [show, setShow] = useState(true)
   return (
 
@@ -22,40 +26,52 @@ const [show, setShow] = useState(true)
     
         <div style={{ backgroundColor: "#F6F6F6", height: "100%", width:"100%", display:"flex", position:"absolute"}}>
 
-          {showIT411 ? (
+          {showNSTP101 ? (
             <>
-            <Capstone onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}></Capstone>
+              <NSTP1 onClickBack={() => setShow(!show) & setShowNSTP101(!showNSTP101)} onClickNext={() => setShow(!show) & setShowNSTP101(!showNSTP101)}></NSTP1>
             </>
           ) : null}
 
-          {showIT412 ? (
+          {showPE101d ? (
             <>
-            <SAM></SAM>
+              <PE1 onClickBack={() => setShow(!show) & setShowPE101d(!showPE101d)} onClickNext={() => setShow(!show) & setShowPE101d(!showPE101d)}></PE1>
             </>
           ) : null}
 
-          {showIT413 ? (
-             <>
-             <SocProf></SocProf>
-             </>
+          {showEng101 ? (
+            <>
+              <Purcom onClickBack={() =>setShow(!show) & setShowEng101(!showEng101)} onClickNext={() =>setShow(!show) & setShowEng101(!showEng101)}></Purcom>
+            </>
           ) : null}
 
-          {showIT414 ? (
-             <>
-             <ITElec3></ITElec3>
-             </>
+          {showMath101 ? (
+            <>
+              <MMW onClickBack={() => setShow(!show) & setShowMath101(!showMath101)} onClickNext={() => setShow(!show) & setShowMath101(!showMath101)}></MMW>
+            </>
           ) : null}
 
-          {showIT415 ? (
-              <>
-              <ITElect4></ITElect4>
-              </>
+          {showSS103 ? (
+            <>
+              <Tcw onClickBack={() => setShow(!show) & setShowSS103(!showSS103)} onClickNext={() => setShow(!show) & setShowSS103(!showSS103)}></Tcw>
+            </>
           ) : null}
 
-          {showGnS ? (
-              <>
-              <GnS></GnS>
-              </>
+          {showSS102 ? (
+            <>
+              <Rph onClickBack={() => setShow(!show) & setShowSS102(!showSS102)} onClickNext={() => setShow(!show) & setShowSS102(!showSS102)}></Rph>
+            </>
+          ) : null}
+
+          {showIT112 ? (
+            <>
+              <Comprog1 onClickBack={() => setShow(!show) & setShowIT112(!showIT112)} onClickNext={() => setShow(!show) & setShowIT112(!showIT112)}></Comprog1>
+            </>
+          ) : null}
+
+          {showIT111 ? (
+            <>
+              <IntroToComputing onClickBack={() => setShow(!show) & setShowIT111(!showIT111)} onClickNext={() => setShow(!show) & setShowIT111(!showIT111)}></IntroToComputing>
+            </>
           ) : null}
 
           {show ? (
@@ -69,37 +85,43 @@ const [show, setShow] = useState(true)
                     top: 70
                   }
                 }>
-              <div style={{marginLeft: "-40rem", marginTop: "-5rem"}}>
+              <div style={{marginLeft: "-40rem", marginTop: "-4rem"}}>
                 <h1 style={{fontWeight:"bold", fontSize: 60}}>LIST OF SUBJECTS</h1>
               </div>
               <div>
                 <h3>{title}</h3>
               </div>
              </div>
-             <div style={{display:"flex", flexDirection:"column", marginLeft: 55, marginTop: "8rem"}}>
+             <div style={{display:"flex", flexDirection:"column", marginLeft: 55, marginTop: "6rem"}}>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT411(!showIT411)} code="IT411" title="Capstone Project and Research 2"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowNSTP101(!showNSTP101)} code="NSTP101" title="ROTC/CWTS/LTS 1"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT412" title="Systems Administration and Maintenance"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowPE101d(!showPE101d)} code="PE101d" title="Physical Activity Towards Health and Fitness 1"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT413(!showIT413)} code="IT413" title="Social and Professional Issues"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowEng101(!showEng101)} code="Eng101" title="Purposive Communication"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT414(!showIT414)} code="IT414" title="IT Elective 3"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowMath101(!showMath101)} code="Math101" title="Mathematics in Modern World"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT415(!showIT415)} code="IT415" title="IT Elective 4"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowSS103(!showSS103)} code="SS103" title="The Contemporary World"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowGnS(!showGnS)} code="GnS" title="Gender And Society"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowSS102(!showSS102)} code="SS102" title="Reading in Philippine History"></SubjectBtn>
+              </div>
+              <div>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT112(!showIT112)} code="IT112" title="Computer Programming 1"></SubjectBtn>
+              </div>
+              <div>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT111(!showIT111)} code="IT111" title="Introduction to Computing"></SubjectBtn>
               </div>
              </div>
-             <div style={{marginTop: 54, marginLeft: -255}}>
-              <BackBtn title = "BACK" onClick={onClick}></BackBtn>
-             </div>
-             
+             <div style={{ display: 'flex', marginTop: "40rem", position:"absolute"}}>
+              <button className='backbtn' onClick={onClickBack}>BACK</button>
+              <button className='nextbtn' onClick={onClickNext} style={{marginLeft:"70rem"}}>NEXT</button>
+          </div>
             </>
           ):null}
              
@@ -110,4 +132,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default FourthYearFirstSem;
+export default FirstYearFirstSem;

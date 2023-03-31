@@ -10,8 +10,8 @@ const [show, setShow] = useState(true)
     <>
     
         <div>
-             <FormGroup>
-            <FormControlLabel control={<Checkbox value={value} />} label={title}/>
+             <FormGroup sx={{height:"2rem"}}>
+              <FormControlLabel   control={<Checkbox value={value} />} label={title}/>
             </FormGroup>
       </div>
       </>

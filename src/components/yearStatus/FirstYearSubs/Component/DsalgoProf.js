@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function ITElec3({onClick, title}) {
+function Dsalgo({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -22,7 +22,7 @@ const [show, setShow] = useState(true)
                   }
                 }>
               <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
-                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT414 - IT Elective 3</h4>
+                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT122 Data Structures and Algorithms</h4>
               </div>              
              </div>
 
@@ -44,13 +44,13 @@ const [show, setShow] = useState(true)
 
                     }}
                 >
-                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Ms. Samantha Fe</h1>
+                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Ms. Joy Ebabacol</h1>
                 </div>
                 
                 <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                    <CheckBox value="M 11:00AM-1:00PM" title="M 11:00AM-1:00PM"></CheckBox>
-                    <CheckBox value="W 9:30AM-11:30AM" title="W 9:30AM-11:30AM"></CheckBox>
-                    <CheckBox value="TH 10:30AM-12:30PM" title="TH 10:30AM-12:30PM"></CheckBox>
+                        <CheckBox value="T 9:00AM-11:00AM" title="T 9:00AM-11:00AM"></CheckBox>
+                        <CheckBox value="TH 1:00PM-3:00PM" title="TH 1:00PM-3:00PM"></CheckBox>
+                        <CheckBox value="F 10:00AM-12:00PM" title="F 10:00AM-12:00PM"></CheckBox>
                 </div>
 
                 <div style={{marginTop:"-6rem"}}>
@@ -71,22 +71,22 @@ const [show, setShow] = useState(true)
 
                         }}
                     >
-                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Mr. Gemerson Tañeca</h1>
+                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Merlita Beronilla</h1>
                     </div>
                     
                     <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                        <CheckBox value="T 4:00PM- 6:00PM" title="T 4:00PM- 6:00PM"></CheckBox>
-                        <CheckBox value="TH 9:30AM-11:30AM" title="TH 9:30AM-11:30AM"></CheckBox>
-                        <CheckBox value="F 2:00PM-4:00PM" title="F 2:00PM-4:00PM"></CheckBox>
+                        <CheckBox value="M 8:00AM- 10:00AM" title="M 8:00AM- 10:00AM"></CheckBox>
+                        <CheckBox value="W 2:00PM- 4:00PM" title="W 2:00PM- 4:00PM"></CheckBox>
+                        <CheckBox value="F 6:00PM- 8:00PM" title="F 6:00PM- 8:00PM"></CheckBox>
                     </div>
 
                 </div>
              </div>
                 <div style={{marginTop: 90}}>
-                    <BackBtn title="BACK" onClick={onClick}></BackBtn>
+                    <BackBtn title="BACK" onClick={onClickBack}></BackBtn>
                 </div>
                 <div style={{marginLeft: "60rem", marginTop: 90}}>
-                    <BackBtn title="NEXT" onClick={onClick}></BackBtn>
+                    <BackBtn title="NEXT" onClick={onClickNext}></BackBtn>
                 </div>
             
              
@@ -97,4 +97,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default ITElec3;
+export default Dsalgo;

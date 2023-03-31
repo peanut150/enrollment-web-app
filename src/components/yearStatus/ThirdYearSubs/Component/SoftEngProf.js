@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function SAM({onClick, title}) {
+function SoftEng({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -22,7 +22,7 @@ const [show, setShow] = useState(true)
                   }
                 }>
               <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
-                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT412 - Systems Administration and Maintenance</h4>
+                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT314 - Software Engineering</h4>
               </div>              
              </div>
 
@@ -44,13 +44,13 @@ const [show, setShow] = useState(true)
 
                     }}
                 >
-                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Mrs. Dianalyn Villalobos</h1>
+                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Ms. Dianne Dairocas</h1>
                 </div>
                 
                 <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                    <CheckBox value="M 9:00AM-11:00AM" title="M 9:00AM-11:00AM"></CheckBox>
-                    <CheckBox value="W 10:00AM-12:00PM" title="W 10:00AM-12:00PM"></CheckBox>
-                    <CheckBox value="F 1:30PM-3:30PM" title="F 1:30PM-3:30PM"></CheckBox>
+                    <CheckBox value="M 5:00PM-7:00PM" title="M 5:00PM-7:00PM"></CheckBox>
+                    <CheckBox value="W 5:30PM-7:30PM" title="W 5:30PM-7:30PM"></CheckBox>
+                    <CheckBox value="F 9:00AM-11:00AM" title="F 9:00AM-11:00AM"></CheckBox>
                 </div>
 
                 <div style={{marginTop:"-6rem"}}>
@@ -71,22 +71,22 @@ const [show, setShow] = useState(true)
 
                         }}
                     >
-                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Mrs. Clotilde Bacayawan</h1>
+                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Sue Lim</h1>
                     </div>
                     
                     <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                        <CheckBox value="M 1:00PM- 3:00PM" title="M 1:00PM- 3:00PM"></CheckBox>
-                        <CheckBox value="W 1:30PM- 3:30PM" title="W 1:30PM- 3:30PM"></CheckBox>
-                        <CheckBox value="TH 11:00AM- 1:00PM" title="TH 11:00AM- 1:00PM"></CheckBox>
+                        <CheckBox value="T 11:00AM- 1:00PM" title="T 11:00AM- 1:00PM"></CheckBox>
+                        <CheckBox value="TH 4:30PM-6:30PM" title="TH 4:30PM-6:30PM"></CheckBox>
+                        <CheckBox value="S 8:00AM-10:00AM" title="S 8:00AM-10:00AM"></CheckBox>
                     </div>
 
                 </div>
              </div>
                 <div style={{marginTop: 90}}>
-                    <BackBtn title="BACK" onClick={onClick}></BackBtn>
+                    <BackBtn title="BACK" onClick={onClickBack}></BackBtn>
                 </div>
                 <div style={{marginLeft: "60rem", marginTop: 90}}>
-                    <BackBtn title="NEXT" onClick={onClick}></BackBtn>
+                    <BackBtn title="NEXT" onClick={onClickNext}></BackBtn>
                 </div>
             
              
@@ -97,4 +97,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default SAM;
+export default SoftEng;

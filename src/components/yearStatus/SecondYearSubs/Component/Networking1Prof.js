@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function Networking1({onClick, title}) {
+function Networking1({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -21,7 +21,7 @@ const [show, setShow] = useState(true)
                     top: 70
                   }
                 }>
-              <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
+              <div style={{marginLeft: "-10rem", marginTop: "-3rem"}}>
                 <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT222 - Networking 1</h4>
               </div>              
              </div>
@@ -82,12 +82,10 @@ const [show, setShow] = useState(true)
 
                 </div>
              </div>
-                <div style={{marginTop: 90}}>
-                    <BackBtn title="BACK" onClick={onClick}></BackBtn>
-                </div>
-                <div style={{marginLeft: "60rem", marginTop: 90}}>
-                    <BackBtn title="NEXT" onClick={onClick}></BackBtn>
-                </div>
+             <div style={{ display: 'flex', marginTop: "35rem", position:"absolute"}}>
+              <button className='backbtn' onClick={onClickBack}>BACK</button>
+              <button className='nextbtn' onClick={onClickNext} style={{marginLeft:"70rem"}}>NEXT</button>
+          </div>
             
              
              

@@ -38,7 +38,7 @@ function FourthYearSecondSem({onClickBack, onClickNext, title}) {
               <BackBtn title = "BACK" onClick={onClickBack}></BackBtn>
              </div>
              <div style={{marginTop: 50, marginLeft: 1270}}>
-              <BackBtn title = "NEXT" ></BackBtn>
+              <BackBtn title = "NEXT" onClick={onClickNext}></BackBtn>
              </div>
              
       </div>

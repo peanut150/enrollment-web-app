@@ -9,7 +9,7 @@ import SystemsIntegrationandArchitecture from "./Component/SystemsIntegrationand
 import Ethics from "./Component/EthicsProf";
 import LifeandWorksofRizal from "./Component/LifeandWorksofRizalProf";
 
-function SecondYearSecondSem({onClick, title}) {
+function SecondYearSecondSem({onClickBack, onClickNext, title}) {
 const [showPATHFIT4, setShowPATHFIT4] = useState(false)
 const [showIT221, setShowIT221] = useState(false)
 const [showIT222, setShowIT222] = useState(false)
@@ -26,43 +26,43 @@ const [show, setShow] = useState(true)
 
           {showPATHFIT4 ? (
             <>
-            <PhysicalActivityTowardsHealthandFitness2 onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}></PhysicalActivityTowardsHealthandFitness2>
+            <PhysicalActivityTowardsHealthandFitness2 onClickBack={() => setShow(!show) & setShowPATHFIT4(!showPATHFIT4)} onClickNext={() => setShow(!show) & setShowPATHFIT4(!showPATHFIT4)}></PhysicalActivityTowardsHealthandFitness2>
             </>
           ) : null}
 
           {showIT221 ? (
             <>
-            <InformationManagement>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</InformationManagement>
+            <InformationManagement onClickBack={() => setShow(!show) & setShowIT221(!showIT221)} onClickNext={() => setShow(!show) & setShowIT221(!showIT221)}></InformationManagement>
             </>
           ) : null}
 
           {showIT222 ? (
              <>
-             <Networking1>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</Networking1>
+             <Networking1 onClickBack={() => setShow(!show) & setShowIT222(!showIT222)} onClickNext={() => setShow(!show) & setShowIT222(!showIT222)}></Networking1>
              </>
           ) : null}
 
           {showIT223 ? (
              <>
-             <WebSystemsandTechnologies>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</WebSystemsandTechnologies>
+             <WebSystemsandTechnologies onClickBack={() => setShow(!show) & setShowIT223(!showIT223)} onClickNext={() => setShow(!show) & setShowIT223(!showIT223)}></WebSystemsandTechnologies>
              </>
           ) : null}
 
           {showIT224 ? (
               <>
-              <SystemsIntegrationandArchitecture>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</SystemsIntegrationandArchitecture>
+              <SystemsIntegrationandArchitecture onClickBack={() => setShow(!show) & setShowIT224(!showIT224)} onClickNext={() => setShow(!show) & setShowIT224(!showIT224)}></SystemsIntegrationandArchitecture>
               </>
           ) : null}
 
           {showEthc ? (
               <>
-              <Ethics>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</Ethics>
+              <Ethics onClickBack={() => setShow(!show) & setShowEthc(!showEthc)} onClickNext={() => setShow(!show) & setShowEthc(!showEthc)}></Ethics>
               </>
           ) : null}
 
           {showRizal ? (
               <>
-              <LifeandWorksofRizal>onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}</LifeandWorksofRizal>
+              <LifeandWorksofRizal onClickBack={() => setShow(!show) & setShowRizal(!showRizal)} onClickNext={() => setShow(!show) & setShowRizal(!showRizal)}></LifeandWorksofRizal>
               </>
           ) : null}
 
@@ -86,30 +86,31 @@ const [show, setShow] = useState(true)
              </div>
              <div style={{display:"flex", flexDirection:"column", marginLeft: 55, marginTop: "8rem"}}>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT411(!showIT411)} code="PATHFIT4" title="Physical Activity Towards Health and Fitness 2"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowPATHFIT4(!showPATHFIT4)} code="PATHFIT4" title="Physical Activity Towards Health and Fitness 2"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT221" title="Information Management"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT221(!showIT221)} code="IT221" title="Information Management"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT413(!showIT413)} code="IT222" title="Networking 1"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT222(!showIT222)} code="IT222" title="Networking 1"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT414(!showIT414)} code="IT223" title="Web Systems and Technologies"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT223(!showIT223)} code="IT223" title="Web Systems and Technologies"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT415(!showIT415)} code="IT224" title="Systems Integration and Architecture"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT224(!showIT224)} code="IT224" title="Systems Integration and Architecture"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="Ethc" title="Ethics"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowEthc(!showEthc)} code="Ethc" title="Ethics"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowGnS(!showGnS)} code="Rizal" title="Life and Works of Rizal"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowRizal(!showRizal)} code="Rizal" title="Life and Works of Rizal"></SubjectBtn>
               </div>
              </div>
-             <div style={{marginTop: 54, marginLeft: -255}}>
-              <BackBtn title = "BACK" onClick={onClick}></BackBtn>
-             </div>
+             <div style={{ display: 'flex', marginTop: "35rem", position:"absolute"}}>
+              <button className='backbtn' onClick={onClickBack}>BACK</button>
+              <button className='nextbtn' onClick={onClickNext} style={{marginLeft:"70rem"}}>NEXT</button>
+          </div>
              
             </>
           ):null}

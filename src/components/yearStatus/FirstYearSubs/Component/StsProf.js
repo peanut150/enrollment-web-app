@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function GnS({onClick, title}) {
+function STS({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -22,7 +22,7 @@ const [show, setShow] = useState(true)
                   }
                 }>
               <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
-                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: GnS - Gender And Society</h4>
+                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: STS - Science, Tecnology and Society</h4>
               </div>              
              </div>
 
@@ -44,13 +44,13 @@ const [show, setShow] = useState(true)
 
                     }}
                 >
-                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Ms. Sunshine Tac</h1>
+                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Mrs. Maria Luz E. Perez</h1>
                 </div>
                 
                 <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                    <CheckBox value="T 7:00AM-8:30AM" title="T 7:00AM-8:30AM"></CheckBox>
-                    <CheckBox value="F 1:00PM-2:30PM" title="F 1:00PM-2:30PM"></CheckBox>
-                    <CheckBox value="S 5:00PM-6:30PM" title="S 5:00PM-6:30PM"></CheckBox>
+                        <CheckBox value="T 10:00AM-11:30AM" title="T 10:00AM-11:30AM"></CheckBox>
+                        <CheckBox value="TH 3:00PM-4:30PM" title="TH 3:00PM-4:30PM"></CheckBox>
+                        <CheckBox value="F 1:00PM-2:30PM" title="F 1:00PM-2:30PM"></CheckBox>
                 </div>
 
                 <div style={{marginTop:"-6rem"}}>
@@ -71,22 +71,22 @@ const [show, setShow] = useState(true)
 
                         }}
                     >
-                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Jewel Dim</h1>
+                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Ash Gracia</h1>
                     </div>
                     
                     <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                        <CheckBox value="M 9:00AM- 10:30AM" title="M 9:00AM- 10:30AM"></CheckBox>
-                        <CheckBox value="TH 1:00PM-2:30PM" title="TH 1:00PM-2:30PM"></CheckBox>
-                        <CheckBox value="F 9:00AM-10:30AM" title="F 9:00AM-10:30AM"></CheckBox>
+                        <CheckBox value="W 1:00PM- 2:30PM" title="W 1:00PM- 2:30PM"></CheckBox>
+                        <CheckBox value="TH 11:30AM-1:00PM" title="TH 11:30AM-1:00PM"></CheckBox>
+                        <CheckBox value="F 9:30AM-11:00AM" title="F 9:30AM-11:00AM"></CheckBox>
                     </div>
 
                 </div>
              </div>
                 <div style={{marginTop: 90}}>
-                    <BackBtn title="BACK" onClick={onClick}></BackBtn>
+                    <BackBtn title="BACK" onClick={onClickBack}></BackBtn>
                 </div>
                 <div style={{marginLeft: "60rem", marginTop: 90}}>
-                    <BackBtn title="NEXT" onClick={onClick}></BackBtn>
+                    <BackBtn title="NEXT" onClick={onClickNext}></BackBtn>
                 </div>
             
              
@@ -97,4 +97,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default GnS;
+export default STS;

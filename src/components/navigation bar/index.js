@@ -7,6 +7,8 @@ import About from '../../pages/about/index';
 import Contact from '../../pages/contact';
 import SignUp from '../../pages/sign up';
 import Dashboard from '../../pages/dashboard';
+import StudMonitor from '../../pages/dashboard/StudMonitor';
+import SelectYear from '../../pages/SelectYear/SelectYear';
 
 export default function Routing() {
     return (
@@ -36,7 +38,6 @@ export default function Routing() {
               <Route path='/dashboard' component={Dashboard} exact>
                 <Dashboard />
               </Route>
-
             </Switch>
           </Router>
         </>

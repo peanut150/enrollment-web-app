@@ -33,3 +33,14 @@
 .enrollButton:hover{
     background: linear-gradient(90deg, #7EE0FF,#15AAD9 );
   }
+
+  input[type="checkbox"] {
+    height: 3rem;
+    height: 3rem;
+    accent-color: #d9d9d9;
+    color: red !important;
+    border: 2px solid red;
+
+  }
+
+   

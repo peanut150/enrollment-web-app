@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function WebSystemsandTechnologies({onClickBack, onClickNext, title}) {
+function ForeignLang({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -22,7 +22,7 @@ const [show, setShow] = useState(true)
                   }
                 }>
               <div style={{marginLeft: "-10rem", marginTop: "-3rem"}}>
-                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT223 - Web Systems and Technologies</h4>
+                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: FreeElec - Foreign Language</h4>
               </div>              
              </div>
 
@@ -44,13 +44,13 @@ const [show, setShow] = useState(true)
 
                     }}
                 >
-                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Mr. Jomar C. Llevado</h1>
+                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Ms. Josephine A. Taban-ud</h1>
                 </div>
                 
                 <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                    <CheckBox value="T 1:00PM-3:00PM" title="T 1:00PM-3:00PM"></CheckBox>
-                    <CheckBox value="TH 8:00AM-11:00AM" title="TH 8:00AM-11:00AM"></CheckBox>
-                    <CheckBox value="F 7:00PM-9:00PM" title="F 7:00PM-9:00PM"></CheckBox>
+                    <CheckBox value="T 1:00PM-2:30PM" title="T 1:00PM-2:30PM"></CheckBox>
+                    <CheckBox value="TH 8:00AM-9:30AM" title="TH 8:00AM-9:30AM"></CheckBox>
+                    <CheckBox value="F 9:00AM-10:30AM" title="F 9:00AM-10:30AM"></CheckBox>
                 </div>
 
                 <div style={{marginTop:"-6rem"}}>
@@ -71,21 +71,23 @@ const [show, setShow] = useState(true)
 
                         }}
                     >
-                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Krizzle Tee</h1>
+                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Scarlet Jewel</h1>
                     </div>
                     
                     <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                        <CheckBox value="M 7:00AM- 9:00AM" title="M 7:00AM- 9:00AM"></CheckBox>
-                        <CheckBox value="T 9:00AM-11:00AM" title="T 9:00AM-11:00AM"></CheckBox>
-                        <CheckBox value="W 1:30PM-3:30PM" title="W 1:30PM-3:30PM"></CheckBox>
+                        <CheckBox value="M 11:00AM- 12:30PM" title="M 11:00AM- 12:30PM"></CheckBox>
+                        <CheckBox value="W 4:00PM-5:30PM" title="W 4:00PM-5:30PM"></CheckBox>
+                        <CheckBox value="TH 1:00PM-2:30PM" title="TH 1:00PM-2:30PM"></CheckBox>
                     </div>
 
                 </div>
              </div>
-             <div style={{ display: 'flex', marginTop: "35rem", position:"absolute"}}>
-              <button className='backbtn' onClick={onClickBack}>BACK</button>
-              <button className='nextbtn' onClick={onClickNext} style={{marginLeft:"70rem"}}>NEXT</button>
-          </div>
+                <div style={{marginTop: 90}}>
+                    <BackBtn title="BACK" onClick={onClickBack}></BackBtn>
+                </div>
+                <div style={{marginLeft: "60rem", marginTop: 90}}>
+                    <BackBtn title="NEXT" onClick={onClickNext}></BackBtn>
+                </div>
             
              
              
@@ -95,4 +97,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default WebSystemsandTechnologies;
+export default ForeignLang;

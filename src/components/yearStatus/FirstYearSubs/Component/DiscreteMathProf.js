@@ -5,7 +5,7 @@ import {Checkbox} from "@mui/material";
 import CheckBox from "./CheckBox";
 import SemBtn from "../../../buttonprops/SemBtn";
 
-function Capstone({onClickBack, onClickNext, title}) {
+function DiscreteMath({onClickBack, onClickNext, title}) {
 const [show, setShow] = useState(true)
   return (
 
@@ -22,7 +22,7 @@ const [show, setShow] = useState(true)
                   }
                 }>
               <div style={{marginLeft: "-10rem", marginTop: "-5rem"}}>
-                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT411 - Capstone Project and Research 2</h4>
+                <h4 style={{fontWeight:"bold", fontSize: 30}}>SUBJECT: IT123 Discrete Mathematics</h4>
               </div>              
              </div>
 
@@ -44,13 +44,13 @@ const [show, setShow] = useState(true)
 
                     }}
                 >
-                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Mr. Dwight Feliciano</h1>
+                    <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 1: Mr. Jay Huiso</h1>
                 </div>
                 
                 <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                    <CheckBox value="M 11:00AM-1:00PM" title="M 11:00AM-1:00PM"></CheckBox>
-                    <CheckBox value="W 1:00PM-3:00PM" title="W 1:00PM-3:00PM"></CheckBox>
-                    <CheckBox value="TH 10:30AM-12:30PM" title="TH 10:30AM-12:30PM"></CheckBox>
+                        <CheckBox value="W 9:00AM-11:30AM" title="W 9:00AM-11:30AM"></CheckBox>
+                        <CheckBox value="TH 1:00PM-3:30PM" title="TH 1:00PM-3:30PM"></CheckBox>
+                        <CheckBox value="F 10:00AM-12:30PM" title="F 10:00AM-12:30PM"></CheckBox>
                 </div>
 
                 <div style={{marginTop:"-6rem"}}>
@@ -71,13 +71,13 @@ const [show, setShow] = useState(true)
 
                         }}
                     >
-                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Ms. Jelian Buco</h1>
+                        <h1 style={{fontSize: 25, fontWeight:"normal"}}>Instructor 2: Mr. Jhon Llyod</h1>
                     </div>
                     
                     <div style={{marginTop: "1rem", marginLeft:"40rem"}}>
-                        <CheckBox value="T 4:00PM- 6:00PM" title="T 4:00PM- 6:00PM"></CheckBox>
-                        <CheckBox value="W 9:00AM- 11:00AM" title="W 9:00AM- 11:00AM"></CheckBox>
-                        <CheckBox value="F 7:30AM-9:30AM" title="F 7:30AM-9:30AM"></CheckBox>
+                        <CheckBox value="M 1:30PM- 3:30PM" title="M 1:30PM- 3:30PM"></CheckBox>
+                        <CheckBox value="W 9:00AM-11:30AM" title="W 9:00AM-11:30AM"></CheckBox>
+                        <CheckBox value="TH 3:00PM-5:30PM" title="TH 3:00PM-5:30PM"></CheckBox>
                     </div>
 
                 </div>
@@ -97,4 +97,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default Capstone;
+export default DiscreteMath;

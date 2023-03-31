@@ -1,7 +1,7 @@
 import './styles.css';
 import pic1 from'./pic1.svg';
 import logo from './logo.png';
-
+import Dashboard from '../../dashboard';
 
 export default function Login() {
 
@@ -30,7 +30,7 @@ export default function Login() {
               </div>
               
               <button className="forgotpassButton">Forgot Password ?</button>
-              <button className="signinButton">Sign In</button>
+              <button className="signinButton" onClick={event => window.location.href='../../dashboard'}>Sign In</button>
           </div>
 
         </div>

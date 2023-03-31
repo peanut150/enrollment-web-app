@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import BackBtn from "../../buttonprops/BackBtn";
-import Capstone from "./Component/CapstoneProf";
 import SubjectBtn from "./SubjectBtn";
-import SAM from "./Component/SAMProf";
-import SocProf from "./Component/SocProfIssuesProf";
-import ITElec3 from "./Component/ITElec3Prof";
-import ITElect4 from "./Component/ITElec4Prof";
-import GnS from "./Component/GnSProf";
+import IAS from "../ThirdYearSubs/Component/IASProf";
+import ITElect1 from "../ThirdYearSubs/Component/ITElect1Prof";
+import Mobprog from "../ThirdYearSubs/Component/MobProgProf";
+import Net2 from "../ThirdYearSubs/Component/Net2Prof";
+import SoftEng from "../ThirdYearSubs/Component/SoftEngProf";
+import Techno from "../ThirdYearSubs/Component/TechnoProf";
 
-function FourthYearFirstSem({onClick, title}) {
-const [showIT411, setShowIT411] = useState(false)
-const [showIT412, setShowIT412] = useState(false)
-const [showIT413, setShowIT413] = useState(false)
-const [showIT414, setShowIT414] = useState(false)
-const [showIT415, setShowIT415] = useState(false)
-const [showGnS, setShowGnS] = useState(false)
+
+function ThirdYearFirstSem({onClickBack, onClickNext, title}) {
+const [showIT311, setShowIT311] = useState(false)
+const [showIT312, setShowIT312] = useState(false)
+const [showIT313, setShowIT313] = useState(false)
+const [showIT314, setShowIT314] = useState(false)
+const [showIT315, setShowIT315] = useState(false)
+const [showES211A, setShowES211A] = useState(false)
 const [show, setShow] = useState(true)
   return (
 
@@ -22,39 +23,39 @@ const [show, setShow] = useState(true)
     
         <div style={{ backgroundColor: "#F6F6F6", height: "100%", width:"100%", display:"flex", position:"absolute"}}>
 
-          {showIT411 ? (
+          {showIT311 ? (
             <>
-            <Capstone onClickBack={() => setShow(!show) & setShowIT411(!showIT411)}></Capstone>
+            <IAS onClickBack={() => setShow(!show) & setShowIT311(!showIT311)} onClickNext={() => setShow(!show) & setShowIT311(!showIT311)}></IAS>
             </>
           ) : null}
 
-          {showIT412 ? (
+          {showIT312 ? (
             <>
-            <SAM></SAM>
+            <Net2 onClickBack={() => setShow(!show) & setShowIT312(!showIT312)} onClickNext={() => setShow(!show) & setShowIT312(!showIT312)}></Net2>
             </>
           ) : null}
 
-          {showIT413 ? (
+          {showIT313 ? (
              <>
-             <SocProf></SocProf>
+             <Mobprog onClickBack={() => setShow(!show) & setShowIT313(!showIT313)} onClickNext={() => setShow(!show) & setShowIT313(!showIT313)}></Mobprog>
              </>
           ) : null}
 
-          {showIT414 ? (
+          {showIT314 ? (
              <>
-             <ITElec3></ITElec3>
+             <SoftEng onClickBack={() => setShow(!show) & setShowIT314(!showIT314)} onClickNext={() => setShow(!show) & setShowIT314(!showIT314)}></SoftEng>
              </>
           ) : null}
 
-          {showIT415 ? (
+          {showIT315 ? (
               <>
-              <ITElect4></ITElect4>
+              <ITElect1 onClickBack={() => setShow(!show) & setShowIT315(!showIT315)} onClickNext={() => setShow(!show) & setShowIT315(!showIT315)}></ITElect1>
               </>
           ) : null}
 
-          {showGnS ? (
+          {showES211A ? (
               <>
-              <GnS></GnS>
+              <Techno onClickBack={() => setShow(!show) & setShowES211A(!showES211A)} onClickNext={() => setShow(!show) & setShowES211A(!showES211A)}></Techno>
               </>
           ) : null}
 
@@ -78,28 +79,28 @@ const [show, setShow] = useState(true)
              </div>
              <div style={{display:"flex", flexDirection:"column", marginLeft: 55, marginTop: "8rem"}}>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT411(!showIT411)} code="IT411" title="Capstone Project and Research 2"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT311(!showIT311)} code="IT311" title="Information Assurance and Security"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT412(!showIT412)} code="IT412" title="Systems Administration and Maintenance"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT312(!showIT312)} code="IT312" title="Networking 2"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT413(!showIT413)} code="IT413" title="Social and Professional Issues"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT313(!showIT313)} code="IT313" title="Mobile Programming"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT414(!showIT414)} code="IT414" title="IT Elective 3"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT314(!showIT314)} code="IT314" title="Software Engineering"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowIT415(!showIT415)} code="IT415" title="IT Elective 4"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowIT315(!showIT315)} code="IT315" title="IT Elective 1"></SubjectBtn>
               </div>
               <div>
-                <SubjectBtn onClick={() => setShow(!show) & setShowGnS(!showGnS)} code="GnS" title="Gender And Society"></SubjectBtn>
+                <SubjectBtn onClick={() => setShow(!show) & setShowES211A(!showES211A)} code="ES211A" title="Technopreneurship"></SubjectBtn>
               </div>
              </div>
-             <div style={{marginTop: 54, marginLeft: -255}}>
-              <BackBtn title = "BACK" onClick={onClick}></BackBtn>
-             </div>
-             
+             <div style={{ display: 'flex', marginTop: "40rem", position:"absolute"}}>
+              <button className='backbtn' onClick={onClickBack}>BACK</button>
+              <button className='nextbtn' onClick={onClickNext} style={{marginLeft:"70rem"}}>NEXT</button>
+          </div>
             </>
           ):null}
              
@@ -110,4 +111,4 @@ const [show, setShow] = useState(true)
   );
 }
 
-export default FourthYearFirstSem;
+export default ThirdYearFirstSem;
