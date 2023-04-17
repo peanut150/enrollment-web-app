@@ -1,9 +1,20 @@
+import { useState } from "react";
+import axios from "axios";
+
 import './signup.css';
 import pic2 from'./pic2.svg';
 import logo4 from './logo4.png';
 
 
 export default function SignUp() {
+
+  const [data, setData] = useState({
+    'email' : '',
+    'username' : '',
+    'password' : ''
+  })
+
+  const [errorPassword, setErrorPassword] = useState('')
 
   return (
     <div className="container">
@@ -25,12 +36,49 @@ export default function SignUp() {
                 <p className="text">Sign up to continue to our application</p>
               </div>
               <div className='inputs'>
-                <input type="text" placeholder="Email" className="inputEmail"></input>
-                <input type="password" placeholder="Password" className="inputPass"></input>
-                <input type="password" placeholder="Confirm Password" className="inputConfirmPass"></input>
+
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="inputEmail"
+                  onChange={(event) => {
+                    let d = data;
+                    setData({...d, email: event.target.value});
+                  }}
+                />
+
+                <input
+                  type="text"
+                  placeholder="Username"
+                  className="inputPass"
+                  onChange={(event) => {
+                    let d = data;
+                    setData({...d, username: event.target.value});
+                  }}
+                />
+                  
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="inputConfirmPass"
+                  onChange={(event) => {
+                    let d = data;
+                    setData({...d, password: event.target.value});
+                  }}
+                />
+
+                <p>{ errorPassword }</p>
+
               </div>
               
-              <button className="signinButton">Create Account</button>
+              <button onClick={() => {
+                axios.post('http://127.0.0.1:8000/api/v1/accounts/users/', data).then(response => {
+                  console.log(response.data)
+                }).catch(error => {
+                  const errorMessage = error.response.data;
+                  setErrorPassword(errorMessage.password)
+                })
+              }} className="signinButton">Create Account</button>
           </div>
 
         </div>
