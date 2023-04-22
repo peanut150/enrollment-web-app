@@ -7,7 +7,7 @@ import { border } from '@mui/system';
 import './dashboard.css'
 import Check from './Check';
 import { AddStudent } from '../../components/api/api';
-
+import { useHistory } from "react-router-dom";
 function StudInfo({back, next}) {
   //const [yearStatus, setYearStatus] = useState('');
   const [firstYear, setFirstYear] = useState(false);
@@ -15,6 +15,7 @@ function StudInfo({back, next}) {
   const [thirdYear, setThirdYear] = useState(false);
   const [fourthYear, setFourthYear] = useState(false);
   const [main, setMain] = useState(true)
+  const history = useHistory();
   const [student, setStudent] = useState({
     "first_name": "",
     "middle_name": "",
@@ -124,22 +125,19 @@ function StudInfo({back, next}) {
 
           </div>
         <h4 style={{paddingTop: 8, color:'red'}}>{error}</h4>
-
-
-
-
-
           <div style={{display:"flex", flexDirection:"column"}}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 30 }}>
             <button className='backbtn' onClick={back}>BACK</button>
             <button className='nextbtn' onClick={async () => {
               if(await AddStudent(student)){
                 console.log('Add success!')
+                history.push('/select_year')
                 setError('')
               }else{
                 setError('Invalid details specified. Please recheck')
               }
               }}>NEXT</button>
+                          <button className='nextbtn' onClick={()=> history.push('/select_year')}>PLACEHOLDER NEXT</button>
           </div>
           </div>
           

@@ -34,7 +34,9 @@ export default function Routing() {
               <Route path='/signup' component={SignUp} exact>
                 <SignUp />
               </Route>
-
+              <Route path='/select_year' component={SelectYear} exact>
+                <SelectYear />
+              </Route>
               <Route path='/dashboard' component={Dashboard} exact>
                 <Dashboard />
               </Route>

@@ -47,9 +47,17 @@ export function GetFirstYearSchedules() {
 
 export function AddStudent(student) {
   return instance.post("/api/v1/students/", student).then((response) => {
+    localStorage.setItem("student_id",response.data.id)
     return response.data;
   }).catch((error)=>{
     return false;
   }
   );
+}
+
+export function GetStudent() {
+  let id = localStorage.getItem("student_id")
+  return instance.get("/api/v1/students/"+id).then((response) => {
+    return response.data;
+  });
 }
