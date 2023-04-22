@@ -2,9 +2,15 @@ import './styles.css';
 import pic1 from'./pic1.svg';
 import logo from './logo.png';
 import Dashboard from '../../dashboard';
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Login() {
-
+  const [user, setUser] = useState({
+    username: '',
+    password: ''
+  })
+  const [error, setError] = useState('')
   return (
     <div className="container">
         <div className="rectangle">
@@ -25,12 +31,19 @@ export default function Login() {
                 <p className="text">Sign in to continue to our application</p>
               </div>
               <div className='inputs'>
-                <input type="text" placeholder="Email" className="inputEmail"></input>
-                <input type="password" placeholder="Password" className="inputPass"></input>
+                <input type="text" placeholder="Username" className="inputEmail" onChange={(e) => setUser({ ...user, username: e.target.value })}></input>
+                <input type="password" placeholder="Password" className="inputPass" onChange={(e) => setUser({ ...user, password: e.target.value })}></input>
               </div>
-              
+              <h4 className="headerSignin">{error}</h4>
               <button className="forgotpassButton">Forgot Password ?</button>
-              <button className="signinButton" onClick={event => window.location.href='../../dashboard'}>Sign In</button>
+              <button className="signinButton" onClick={() => {
+                axios.post('http://127.0.0.1:8000/api/v1/accounts/token/login', user).then(response => {
+                  console.log(response.data)
+                  window.location.href='../../dashboard'
+                }).catch(error => {
+                  setError(error.response.data)
+                })
+                }}>Sign In</button>
           </div>
 
         </div>
