@@ -45,34 +45,11 @@ export function GetFirstYearSchedules() {
       });
   }
 
-export function GetPublicNotes() {
-  return instance.get("/api/v1/public_notes/").then((response) => {
+export function AddStudent(student) {
+  return instance.post("/api/v1/students/", student).then((response) => {
     return response.data;
-  });
-}
-
-
-// User APIs
-
-export function UserRegister(register) {
-  return instance
-    .post("/api/v1/accounts/users/", register)
-    .then(async (response) => {
-      return true;
-    })
-    .catch((error) => {
-      return false;
-    });
-}
-
-export function UserLogin(user) {
-  return instance
-    .post("/api/v1/accounts/token/login/", user)
-    .then(async (response) => {
-      localStorage.setItem("token", JSON.stringify(response.data.auth_token));
-      return true;
-    })
-    .catch((error) => {
-      return false;
-    });
+  }).catch((error)=>{
+    return false;
+  }
+  );
 }
