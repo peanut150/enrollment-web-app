@@ -34,14 +34,15 @@ export default function Login() {
                 <input type="text" placeholder="Username" className="inputEmail" onChange={(e) => setUser({ ...user, username: e.target.value })}></input>
                 <input type="password" placeholder="Password" className="inputPass" onChange={(e) => setUser({ ...user, password: e.target.value })}></input>
               </div>
-              <h4 className="headerSignin">{error}</h4>
+              <h5 style={{color:'red'}} className="headerSignin">{error}</h5>
               <button className="forgotpassButton">Forgot Password ?</button>
               <button className="signinButton" onClick={() => {
                 axios.post('http://127.0.0.1:8000/api/v1/accounts/token/login', user).then(response => {
                   console.log(response.data)
+                  setError('')
                   window.location.href='../../dashboard'
                 }).catch(error => {
-                  setError(error.response.data)
+                  setError('Invalid login. Please try again')
                 })
                 }}>Sign In</button>
           </div>
